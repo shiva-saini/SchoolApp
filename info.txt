@@ -1,0 +1,54 @@
+// conversion of excel file into csv file step by step guid
+
+To convert an Excel file to a CSV (Comma-Separated Values) file, you can use Microsoft Excel itself or other tools like LibreOffice Calc. Here are the steps to do it in Microsoft Excel:
+
+Using Microsoft Excel:
+
+Open the Excel file that you want to convert to CSV.
+
+Select the worksheet that you want to convert. If you want to convert the entire workbook, you can skip this step.
+
+Click "File" in the top menu.
+
+Click "Save As."
+
+Choose a location where you want to save the CSV file.
+
+In the "Save as type" dropdown, select "CSV (Comma delimited) (*.csv)".
+
+Click "Save."
+
+If a warning about saving in CSV format appears, click "OK."
+
+If you've selected a specific worksheet, you may be prompted to confirm that you want to save only that worksheet. Click "OK" to proceed.
+
+Your Excel file will be saved in CSV format at the specified location.
+
+Using LibreOffice Calc:
+
+If you don't have Microsoft Excel, you can use LibreOffice Calc, which is a free and open-source spreadsheet software. Here's how to convert an Excel file to CSV using LibreOffice Calc:
+
+Open LibreOffice Calc.
+
+Click "File" and then "Open" to open your Excel file.
+
+Select the worksheet that you want to convert. If you want to convert the entire workbook, you can skip this step.
+
+Click "File" and then "Save As."
+
+Choose a location where you want to save the CSV file.
+
+In the "Save as type" dropdown, select "Text CSV (.csv)".
+
+Click "Save."
+
+You will be presented with CSV export options. Ensure that the settings match your requirements, such as the field delimiter (usually a comma) and text delimiter (usually none). Click "OK" to proceed.
+
+Your Excel file will be saved in CSV format with the specified settings.
+
+After performing these steps, you'll have a CSV file that can be easily used as input in your C++ program or any other application that supports CSV files.
+
+
+
+
+
