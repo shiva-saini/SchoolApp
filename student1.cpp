@@ -100,12 +100,7 @@ void showStudentDetails(){
 
 void addStudentDetails(StudentRecord student){
     std::string filename = "data.csv";
-    // StudentRecord student1("10000005","Shiva","Saini",23,"9384756123",7.82);
-    // StudentRecord student2("10000006","Kartik","Saini",15,"9384756124",7);
-    // StudentRecord student3("1000007","Chintu","Saini",15,"9384756125",9);
     writeStudentToCSV(filename, student);
-    // writeStudentToCSV(filename, student2);
-    // writeStudentToCSV(filename, student3);
 }
 
 void deleteStudentById(string id){
@@ -124,11 +119,47 @@ void deleteStudentById(string id){
         addStudentDetails(student);
     }
 }
+
+
+void updateStudentInfo(std::vector<StudentRecord>& students,StudentRecord updatedStudent) {
+    for (StudentRecord& student : students) {
+        if (student.Id == updatedStudent.Id) {
+            student.Id = updatedStudent.Id;
+            student.FirstName = updatedStudent.FirstName;
+            student.LastName = updatedStudent.LastName;
+            student.Age = updatedStudent.Age;
+            student.PhoneNumber = updatedStudent.PhoneNumber;
+            student.Gpa = updatedStudent.Gpa;
+            break;
+        }
+    }
+
+    std::string filename = "data.csv";
+    std::ofstream file(filename, std::ios::out);
+    for(auto student:students){
+        addStudentDetails(student);
+    }
+}
+
+void updateStudent(StudentRecord updatedStudent){
+     vector<StudentRecord> allStudents = giveAllStudentsDetails();
+     for(auto student : allStudents){
+        if(student.Id == updatedStudent.Id){
+            updateStudentInfo(allStudents,updatedStudent);
+            break;
+        }
+     }
+}
+
+
 int main(){
     showStudentDetails();
-    StudentRecord student("1000008","Donald","Trump",70,"0478367452",9.00);
-    addStudentDetails(student);
-    showStudentDetails();
-    deleteStudentById("10000001");
+    // StudentRecord student("1000006","Cloe","leo",17,"0478367452",9.00);
+    // addStudentDetails(student);
+    // showStudentDetails();
+    // deleteStudentById("1000001");
+    // showStudentDetails();
+    StudentRecord updatedStudent("1000005","Joe","Trump1",75,"0478367452",7.5);
+    updateStudent(updatedStudent);
     showStudentDetails();
 }
