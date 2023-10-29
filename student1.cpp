@@ -6,8 +6,7 @@
 
 using namespace std;
 
-
-bool opn = false;
+//  to automatically update the id of a student when deleted we can use index as id in vector of StudentRecord
 
 class StudentRecord{
     public:
