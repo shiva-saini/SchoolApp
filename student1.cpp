@@ -7,7 +7,7 @@
 using namespace std;
 
 //  to automatically update the id of a student when deleted we can use index as id in vector of StudentRecord
-
+//  if we are using string for id we have to make a function to increase or decrease string by one
 class StudentRecord{
     public:
     string Id;
@@ -107,8 +107,16 @@ void deleteStudentById(string id){
     vector<StudentRecord> allUpdatedStudents;
      
     for(auto student:allStudents){
-        if(student.Id != id){
+        if(student.Id == id){
+            continue;
+        }
+        if(student.Id < id){
          allUpdatedStudents.push_back(student);
+        }else{
+            int x = atoi(student.Id.c_str());
+            x -= 1;
+            student.Id = to_string(x);
+            allUpdatedStudents.push_back(student);
         }
     }
 
@@ -156,9 +164,9 @@ int main(){
     // StudentRecord student("1000006","Cloe","leo",17,"0478367452",9.00);
     // addStudentDetails(student);
     // showStudentDetails();
-    // deleteStudentById("1000001");
+    // deleteStudentById("1000002");
     // showStudentDetails();
-    StudentRecord updatedStudent("1000005","Joe","Trump1",75,"0478367452",7.5);
-    updateStudent(updatedStudent);
-    showStudentDetails();
+    // StudentRecord updatedStudent("1000005","Joe","Trump1",75,"0478367452",7.5);
+    // updateStudent(updatedStudent);
+    // showStudentDetails();
 }
