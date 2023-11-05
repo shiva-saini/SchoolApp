@@ -1,3 +1,13 @@
+//command line guid
+//g++ mymain.cpp myfunctions.cpp -o program  
+g++ --- represents coupile name
+mymain ---> main function file
+myfunctions.cpp ---> file name in which we will import .h file and define the fuction 
+-o program ----> executable output file you can change name from program to any
+
+
+
+
 // conversion of excel file into csv file step by step guid
 
 To convert an Excel file to a CSV (Comma-Separated Values) file, you can use Microsoft Excel itself or other tools like LibreOffice Calc. Here are the steps to do it in Microsoft Excel:
